@@ -4,7 +4,7 @@ import Spline from '@splinetool/react-spline';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function RobotPortfolio() {
-  const [modal, setModal] = useState(null);
+  const [modal, setModal] = useState<string | null>(null);
   const [splineLoaded, setSplineLoaded] = useState(false);
   const [form, setForm] = useState({
     name: '',
@@ -118,7 +118,8 @@ export default function RobotPortfolio() {
               position: 'relative',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              touchAction: 'pan-y pinch-zoom'
             }}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
