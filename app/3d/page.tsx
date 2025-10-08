@@ -16,7 +16,6 @@ declare global {
   }
 }
 
-export {};
 export {}; 
 
 import React, { useEffect, useRef, useState } from 'react';
@@ -164,7 +163,9 @@ const Spline3DSection: React.FC = () => {
             )}
 
             {/* Spline Viewer */}
-            <spline-viewer url="https://prod.spline.design/rqxdRlpA2zf8XSsG/scene.splinecode" />
+            {React.createElement('spline-viewer', {
+              url: 'https://prod.spline.design/rqxdRlpA2zf8XSsG/scene.splinecode'
+            })}
 
             {/* Indicador de Interação */}
             {isInteracting && (
