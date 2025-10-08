@@ -1,11 +1,9 @@
 'use client';
 
-'use client';
-
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      'spline-viewer': React.DetailedHTMLProps
+      'spline-viewer': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement> & {
           url?: string;
         },
@@ -15,6 +13,7 @@ declare global {
   }
 }
 
+export {};
 export {}; 
 
 import React, { useEffect, useRef, useState } from 'react';
