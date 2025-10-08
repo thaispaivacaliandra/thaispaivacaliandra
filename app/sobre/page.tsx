@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function SobrePage() {
   const [isPaused, setIsPaused] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(0);
   const userInteractingRef = useRef(false);
 
   const projects = [
